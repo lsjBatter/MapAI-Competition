@@ -24,7 +24,7 @@ dependencies = [
     "argparse",
     "os",
     "yaml",
-    
+    "segmentation_models_pytorch"
 
 ]
 dynamic = ["version", "readme"]
