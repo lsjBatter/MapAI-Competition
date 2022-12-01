@@ -52,7 +52,6 @@ if __name__ == "__main__":
         args.path_size = 224
         args.input = 1
         args.lidar = True
-        args.modelp_path = './model_p/Unet-efficientnet-b4_224.pt'
         evaluate_model(args=args)
 
     exit(0)
