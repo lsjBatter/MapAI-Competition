@@ -100,7 +100,15 @@ def main(args):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     ## ['efficientnet-b3' , 'mobilenet_v2']
     model = Net(name_backbone=args.backbone,in_ch=args.input,out_ch=args.output)
-    model.load_state_dict(torch.load(args.modelp_path))
+    
+    pt_id = args.modelp_path.split("/")[-2]
+
+    # Download trained model ready for inference
+    url_to_drive = f"https://drive.google.com/uc?id={pt_id}"
+    model_checkpoint = "model.pt"
+
+    gdown.download(url_to_drive, model_checkpoint, quiet=False)
+    model.load_state_dict(torch.load(model_checkpoint))
     test_dataset = MpiAItest(args.img,args.gt)
     img = read_img(test_dataset)
     iou_scores = np.zeros(len(test_dataset))
@@ -148,7 +156,7 @@ if __name__ == "__main__":
                             help='groundtruth  path')
     parser.add_argument('--backbone', default='efficientnet-b3', type=str,metavar='backbone',
                             help='backbone')
-    parser.add_argument('--modelp_path', default='/home/lisijiang/Documents/MapAI/test/model_p/optical/crop+rotate/Unet-efficientnet-b3.pth', type=str,metavar='DIR',
+    parser.add_argument('--modelp_path', default='https://drive.google.com/file/d/1guwUhWMKbqeztGRC1y41wSDDB6Q7aVrB/view?usp=sharing', type=str,metavar='DIR',
                             help='model_p path')
     parser.add_argument('--save_path', default='/home/lisijiang/Documents/MapAI/test/PNG/Efficientnet/b3/rotate', type=str,metavar='DIR',
                             help='save path')
