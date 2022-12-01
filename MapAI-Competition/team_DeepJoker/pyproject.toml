@@ -18,12 +18,13 @@ dependencies = [
     "opencv-python",
     "numpy",
     "datasets",
-    "matplotlib"，
+    "matplotlib",
     "ttach",
     "albumentations",
     "argparse",
     "os",
-    "yaml"
+    "yaml",
+    
 
 ]
 dynamic = ["version", "readme"]
