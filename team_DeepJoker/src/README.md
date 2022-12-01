@@ -29,7 +29,7 @@ The commands above will output their predictions to a submission folder
 
 Team name: DeepJoker
 
-Team participants: SijiangLi, Jian Kang
+Team participants: Sijiang Li, Jian Kang
 
 Emails: 20215228067@stu.suda.edu.cn, jiankang@suda.edu.cn
 
