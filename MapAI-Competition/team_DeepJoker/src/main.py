@@ -31,7 +31,7 @@ if __name__ == "__main__":
                             help='groundtruth  path')
     parser.add_argument('--backbone', default='efficientnet-b3', type=str,metavar='backbone',
                             help='backbone')
-    parser.add_argument('--modelp_path', default='./model_p/Unet-efficientnet-b3.pt', type=str,metavar='DIR',
+    parser.add_argument('--modelp_path', default='https://drive.google.com/file/d/1guwUhWMKbqeztGRC1y41wSDDB6Q7aVrB/view?usp=sharing', type=str,metavar='DIR',
                             help='model_p path')
     parser.add_argument('--save_path', default='./submission', type=str,metavar='DIR',
                             help='save path')
@@ -47,6 +47,7 @@ if __name__ == "__main__":
         evaluate_model(args=args)
         
     elif args.task == 2:
+        args.modelp_path = 'https://drive.google.com/file/d/1x9PlLXrn7vFN6zQone8VXjt-Vze4aFeG/view?usp=sharing'
         args.backbone = 'efficientnet-b4'
         args.path_size = 224
         args.input = 1
