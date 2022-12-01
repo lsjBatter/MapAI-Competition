@@ -18,7 +18,7 @@ python train.py --task 2
 ## Evaluation
 
 ```python
-mkdir ./submission
+mkdir submission
 python main.py --data-type validation --submission-path ./submission --task 1
 python main.py --data-type validation --submission-path ./submission --task 2
 ```
