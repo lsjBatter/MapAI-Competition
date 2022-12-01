@@ -23,7 +23,7 @@ if __name__ == "__main__":
                             help='input channels (default: 3)')      
     parser.add_argument('--output', default=2, type=int, metavar='channels',
                             help='output channels (default: 2)')  
-    parser.add_argument('--lidar', default= None, type=bool, 
+    parser.add_argument('--lidar', default=None, type=bool, 
                             help='lidar (default: None)') 
     parser.add_argument('--img', default='/boot/data1/Li_data/data/competition/MapAI-Competition/validation/images', type=str,metavar='DIR',
                             help='Test image path')
