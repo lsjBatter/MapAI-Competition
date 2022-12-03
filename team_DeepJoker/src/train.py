@@ -22,7 +22,7 @@ def train(model, train_loader,criterion,optimizer,device,epoch):
         images,mask = data
         images,mask = images.to(device),mask.to(device)
 
-        optimizer.zero_grad()  # 清零梯度准备计算
+        optimizer.zero_grad()  
 
         out,e,d = model(images)  
         loss_seg = criterion(out,mask) 
