@@ -10,7 +10,7 @@ class Net(nn.Module):
     Args:
     in_ch : input_channels
     ou_ch : num_classes
-    name_backbone:['efficientnet-b3' , 'efficientnet-b4' , 'resnet18' , 'resnet50' , 'mobilenet_v2' , 'vgg16']
+    name_backbone:['efficientnet-b3' , 'efficientnet-b4']
                   default: 'resnet101'
 
     """
