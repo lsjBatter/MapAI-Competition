@@ -51,7 +51,7 @@ if __name__ == "__main__":
         args.backbone = 'efficientnet-b4'
         args.path_size = 224
         args.input = 1
-        args.lidar = True
+        args.lidar = Tru
         evaluate_model(args=args)
 
     exit(0)
